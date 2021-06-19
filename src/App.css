@@ -1,38 +1,158 @@
+body {
+  margin-left: 0;
+  background-color: #9FA7D1;
+}
+
 .App {
   text-align: center;
+  user-select: none;
+  font-family: 'Amatic SC', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.arrow {
+  border: solid #353F6E;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 60px;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  position: fixed;
+  right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: fixed;
+  left: 10px;
+}
+
+.controlContainer {
+  position: fixed;
+  top: 110px;
+  width: 100%;
+  bottom: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ponchoImage {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  align-self: center;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imagesLeft {
+  width: 49vw;
+  position: fixed; 
+  top: 100px;
+  bottom: 60px;
+  left: 0;
+  z-index: 2;
+}
+
+.imagesRight {
+  width: 49vw;
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  top: 100px;
+  z-index: 2;
+}
+
+h2 {
+  font-size: 80px;
+  margin: 0;
+  color: #353F6E;
+}
+
+.birthday  {
+  font-size: 40px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 3px;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  color: #353F6E;
+}
+
+sup {
+  font-size: 25px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 770px) {
+  .ponchoImage {
+    max-width: 100%;
+    height: auto;
+    max-height: 90%;
+    border-radius: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .arrow {
+    padding: 20px
+  }
+
+  .arrow {
+    border: solid #9FA7D1;
+    border-width: 0 1px 1px 0;
+    z-index: 2;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+.birthday {
+  font-size: 30px;
+}
+sup {
+  font-size: 20px;
+}
+.ponchoImage {
+  top: 15%;
+}
+}
+
+@media only screen and (max-width: 320px) {
+  .ponchoImage {
+    top: 25px;
+  }
+
+  .arrow {
+    padding: 10px
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .birthday {
+    font-size: 28px;
+  }
+
+  sup {
+    font-size: 15px;
   }
 }
