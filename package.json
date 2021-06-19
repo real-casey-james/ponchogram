@@ -2,7 +2,7 @@
   "name": "poncho",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://real-casey-james.github.io/my-app",
+  "homepage": "https://real-casey-james.github.io/ponchogram",
   "dependencies": {
     "framer-motion": "^4.1.17",
     "gh-pages": "^3.2.2",
